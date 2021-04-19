@@ -20,7 +20,29 @@ ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 /______/______/______/______/______/______/______/______/______/______/_____ /
 *******************************************************************************
 ''')
+
 print("Welcome to Treasure Island.")
 print("Your mission is to find the treasure.") 
 
-#https://www.draw.io/?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Treasure%20Island%20Conditional.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1oDe4ehjWZipYRsVfeAx2HyB7LCQ8_Fvi%26export%3Ddownload
+first_choice = input("Your are at a crossroad. Please type LEFT or RIGHT. \n")
+if first_choice.lower() == "left":
+  second_choice = (input("Good choice, you made it to a lake! There is an island in the middle, choose to WAIT or instead SWIM to go for it. \n"))
+
+  if second_choice.lower() == "wait":
+    third_choice = input("Yes! You made it to the island unharmed. There is a castle with 3 colored doors, pick one to find the treasure : RED, YELLOW or BLUE.\n")
+    
+    if third_choice.lower() == "yellow":
+      forth_choice = ("You won a treasure!")
+      print(forth_choice)
+    elif third_choice.lower() == "red":
+      print("Game over, you got burnt by fire.")
+    elif third_choice.lower() == "blue":
+      print("Game over, you got eaten by a lion!")
+    else:
+      print("No treasure here, game over!")
+  else:
+    print(input("Game over, you got attacked by a trout."))
+else:
+  print("Game over, you fell into a hole.")
+
+
